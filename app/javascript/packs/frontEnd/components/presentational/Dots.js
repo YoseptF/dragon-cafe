@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 import uid from 'uid';
-import PropTypes from 'prop-types';
+import PropTypes, { object } from 'prop-types';
 import * as S from './Slider.styles';
 
 const Dots = ({ dotsnum, current, handleClick }) => {
@@ -12,7 +12,7 @@ const Dots = ({ dotsnum, current, handleClick }) => {
   return (
     <S.Dots>
       {
-        Array(dotsnum).fill().map((dot, index) => (
+        dotsnum.map((dot, index) => (
           <S.Dot
             data-dot={dot}
             key={uid()}
@@ -30,7 +30,7 @@ const Dots = ({ dotsnum, current, handleClick }) => {
 };
 
 Dots.propTypes = {
-  dotsnum: PropTypes.number.isRequired,
+  dotsnum: PropTypes.arrayOf(object).isRequired,
   current: PropTypes.number.isRequired,
   handleClick: PropTypes.func.isRequired,
 };

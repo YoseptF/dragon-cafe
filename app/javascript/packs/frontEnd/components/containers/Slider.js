@@ -20,7 +20,7 @@ const Slider = () => {
       text: 'new Slide',
     },
     {
-      image: 'https://www.nicepng.com/png/detail/761-7611406_dejavu-logo-png-color-deja-vu-real-estate.png',
+      image: 'https://via.placeholder.com/100/f9f',
       text: 'extra slide',
     },
     {
@@ -33,7 +33,7 @@ const Slider = () => {
     const slideLoop = setInterval(() => {
       const newSlide = slideRef.current + 2 > slidersFromApi.length ? 0 : slideRef.current + 1;
       setSlide(newSlide);
-    }, 10000);
+    }, 9000);
 
     setLoop(slideLoop);
   };
@@ -63,7 +63,7 @@ const Slider = () => {
           ))}
         </S.List>
       </S.Window>
-      <Dots current={slide} dotsnum={slidersFromApi.length} handleClick={dotClick} />
+      <Dots current={slide} dotsnum={slidersFromApi} handleClick={dotClick} />
     </S.Slider>
   );
 };

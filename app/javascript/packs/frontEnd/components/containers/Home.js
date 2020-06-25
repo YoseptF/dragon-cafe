@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from '../presentational/Home.styles';
-import Nav from '../presentational/Nav';
+import Nav from './Nav';
 import Slider from './Slider';
 
 const Home = () => (

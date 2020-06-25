@@ -27,6 +27,7 @@ const Slide = styled.div`
     background-image: url(${props => props.image});
     background-position: center;
     background-repeat: no-repeat;
+    background-size: contain;
   `}
 
   h1{
@@ -50,6 +51,7 @@ const Dots = styled.ul`
 const Dot = styled.li`
   margin-bottom: 1rem;
   color: ${white};
+  cursor: pointer;
 `;
 
 export {
